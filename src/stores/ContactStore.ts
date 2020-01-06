@@ -1,34 +1,10 @@
-import { observable, action, computed } from "mobx";
-import { RootStore } from "./RootStore";
+import { types } from "mobx-state-tree";
 
-interface FormValues {
-    email: string;
-    firstName: string;
-    lastName: string;
-}
+export const FormValues = types.model("FormValues", {
+  id: types.identifier,
+  email: types.string,
+  firstName: types.string,
+  lastName: types.string,
+})
 
-
-export class ContactStore {
-    protected rootStore: RootStore;
-
-    public constructor(rootStore: RootStore) {
-        this.rootStore = rootStore;
-      }
-    
-      @observable public formvalue: FormValues = {
-          email: "",
-          firstName: "",
-          lastName: "",
-
-      };
-    
-      @action public saveForm = () => {
-        console.log('Form Value: ', this.formvalue);
-      };
-
-      @computed public get compiledValues() {
-        return `Values: ${this.formvalue}`;
-      }
-    
-
-}
+export const ContactStore = types.model("ContactStore", { FormValues })

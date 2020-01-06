@@ -3,7 +3,7 @@
       "outDir": "./dist/",
       "noImplicitAny": true,
       "target": "es5",
-      "module": "commonjs",
+      "module": "esnext",
       "jsx": "react",
       "allowJs": true,
       "sourceMap": true,
@@ -14,6 +14,10 @@
       "noImplicitThis": true,
       "strict": true,
       "importHelpers": true,
+      "strictNullChecks": false,
+      "noImplicitReturns": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "skipLibCheck": true,
       "lib": [
         "dom",
         "esnext"

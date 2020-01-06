@@ -7,10 +7,10 @@ import { RootStore } from "./stores";
 
 import App from "./containers/App";
 
-const rootStore = new RootStore();
+const rootStore = RootStore.create();
 
 if (process.env.NODE_ENV !== "production") {
-  console.log("Staging Mode");
+  console.log("Staging Mode", rootStore );
 }
 
 ReactDOM.render(

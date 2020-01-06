@@ -30,7 +30,7 @@ Navigate to `http://localhost:3000`
   - React Router DOM
 - Styled Components 4.1.3
 - Source Map
-- Typescript 3.2.4
+- Typescript 3.7.4
   - ESNEXT
   - Linter
 - Webpack 4.16.2
